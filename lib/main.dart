@@ -19,11 +19,11 @@ class MyApp extends StatelessWidget {
           title: 'Material App',
           theme:  value ? ThemeSettings.darkTheme(context) : ThemeSettings.ligthTheme(context),
           debugShowCheckedModeBanner: false,
-          home: LoginScreen(),
+          home: const LoginScreen(),
           routes: {
-            "/home" : (context) => HomeScreen(),
-            "/profile" : (context) => ProfileScreen(),
-            "/login" : (context) => LoginScreen(),
+            "/home" : (context) => const HomeScreen(),
+            "/profile" : (context) => const ProfileScreen(),
+            "/login" : (context) => const LoginScreen(),
           },
         );
       }

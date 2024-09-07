@@ -21,7 +21,7 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         backgroundColor: ColorsSettings.navColor,
         actions: [
-          IconButton(onPressed: (){}, icon: Icon(Icons.access_alarm)),
+          IconButton(onPressed: (){}, icon: const Icon(Icons.access_alarm)),
           GestureDetector(
             onTap: (){},
             child: 
@@ -34,12 +34,12 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       body: Builder(builder: (context){
         switch (v_index){
-          case 1: return ProfileScreen();
-          default: return ProfileScreen();
+          case 1: return const ProfileScreen();
+          default: return const ProfileScreen();
         }
       }),
       //endDrawer: Drawer(),
-      drawer: Drawer(),
+      drawer: const Drawer(),
       bottomNavigationBar: ConvexAppBar(
         items: const [
           TabItem(icon: Icons.home, title: 'Home'),
