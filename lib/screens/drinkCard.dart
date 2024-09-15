@@ -113,7 +113,7 @@ class DrinkCard extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               const Text(
-                'Frappuccino',
+                'ReRoll',
                 style: TextStyle(
                     fontSize: 35,
                     fontWeight: FontWeight.bold,
@@ -159,6 +159,7 @@ class DrinkCard extends StatelessWidget {
                         width: 20,
                       ),
                       Text(
+                        textAlign: TextAlign.center,
                         '\$',
                         style: TextStyle(fontSize: 20, color: Colors.white),
                       ),
@@ -166,10 +167,12 @@ class DrinkCard extends StatelessWidget {
                         width: 10,
                       ),
                       Text(
+                        textAlign: TextAlign.center,
                         '4.',
                         style: TextStyle(fontSize: 19, color: Colors.white),
                       ),
                       Text(
+                        textAlign: TextAlign.center,
                         '70',
                         style: TextStyle(fontSize: 14, color: Colors.white),
                       ),
@@ -186,8 +189,8 @@ class DrinkCard extends StatelessWidget {
 
   Widget buildCupImage(Size size) {
     return Positioned(
-      bottom: 20,
-      right: -size.width * .2 / 2 + 30,
+      bottom: -40,
+      right: -size.width * .6 / 1 + 30,
       child: Transform.rotate(
         angle: -math.pi/14*rotate,
         child: Image.asset(

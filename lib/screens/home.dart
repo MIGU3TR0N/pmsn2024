@@ -113,7 +113,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                     ? controller.reverse()
                     : controller.forward(),
                 child: Image.asset(
-                  'assets/logo.png',
+                  'assets/cs2logo.png',
                   width: 50,
                   height: 50,
                 ),
@@ -145,38 +145,38 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
   List<Drink> getDrinks() {
     List<Drink> list = [];
     list.add(Drink(
-        'Tirami',
-        'Sù',
-        'assets/blur_image.png',
-        'assets/bean_top.png',
-        'assets/bean_small.png',
-        'assets/bean_blur.png',
-        'assets/cup.png',
-        'then top with whipped cream and mocha drizzle to bring you endless \njava joy',
-        mBrownLight,
-        mBrown));
+        'Todo o',
+        ' nada',
+        'assets/blur_cs.jpg',
+        'assets/smoke.png',
+        'assets/grenade.png',
+        'assets/graffiti2.png',
+        'assets/awp.png',
+        'En nuestro casino cs ReRoll obten la skin de tu sueños \nPara presumir en tus partidas',
+        mPinkLight,
+        mPink));
     list.add(Drink(
-        'Green',
-        'Tea',
-        'assets/green_image.png',
-        'assets/green_top.png',
-        'assets/green_small.png',
-        'assets/green_blur.png',
-        'assets/green_tea_cup.png',
-        'milk and ice and top it with sweetened whipped cream to give you \na delicious boost\nof energy.',
-        greenLight,
-        greenDark));
+        'Recom',
+        'pensas',
+        'assets/blur_cs_blue.jpg',
+        'assets/smoke.png',
+        'assets/incgrenade.png',
+        'assets/graffiti.png',
+        'assets/ak47.png',
+        'Una bonificacion del 5% \nen cada deposito\n+ recompesas diarias.',
+        blueLight,
+        blueDark));
     list.add(Drink(
-        'Triple',
-        'Mocha',
-        'assets/mocha_image.png',
-        'assets/chocolate_top.png',
-        'assets/chocolate_small.png',
-        'assets/chocolate_blur.png',
-        'assets/mocha_cup.png',
-        'layers of whipped cream that’s infused with cold brew, white chocolate mocha and dark \ncaramel.',
-        mBrownLight,
-        mBrown));
+        'Eventos ',
+        'al mes',
+        'assets/blur_cs_red.jpg',
+        'assets/grenade.png',
+        'assets/smoke.png',
+        'assets/graffiti3.png',
+        'assets/p250.png',
+        'Contamos con eventos tematicos mensuales \ncon aumentos de probabilidad de salida de esas skins especiales.',
+        redLight,
+        redDark));
     return list;
   }
 

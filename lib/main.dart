@@ -20,8 +20,8 @@ class MyApp extends StatelessWidget {
           title: 'Material App',
           theme:  value ? ThemeSettings.darkTheme(context) : ThemeSettings.ligthTheme(context),
           debugShowCheckedModeBanner: false,
-          home: const LoginScreen(),
-            //Home(),
+          home: //const LoginScreen(),
+            Home(),
           routes: {
             "/home" : (context) => const HomeScreen(),
             "/profile" : (context) => const ProfileScreen(),
