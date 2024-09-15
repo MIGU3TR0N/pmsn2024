@@ -5,6 +5,8 @@ import 'drinkCard.dart';
 
 
 class Home extends StatefulWidget {
+  const Home({super.key});
+
   @override
   _HomeState createState() => _HomeState();
 }
@@ -18,7 +20,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
   @override
   void initState() {
     controller =
-        AnimationController(vsync: this, duration: Duration(milliseconds: 800));
+        AnimationController(vsync: this, duration: const Duration(milliseconds: 800));
     animation = CurvedAnimation(parent: controller, curve: Curves.easeOutBack);
     pageController = PageController(viewportFraction: .8);
     pageController.addListener(() {
@@ -58,7 +60,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
       padding: const EdgeInsets.only(top: 20.0),
       child: Row(
         children: <Widget>[
-          SizedBox(
+          const SizedBox(
             width: 20,
           ),
           AnimatedBuilder(
@@ -73,7 +75,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                   ),
                 );
               }),
-          Spacer(),
+          const Spacer(),
           AnimatedBuilder(
               animation: animation,
               builder: (context, snapshot) {
@@ -86,7 +88,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                   ),
                 );
               }),
-          SizedBox(
+          const SizedBox(
             width: 20,
           ),
         ],
@@ -105,7 +107,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
               transform: Matrix4.identity()
                 ..translate(0.0, size.height / 2 * (1 - animation.value))
                 ..scale(1 + (1 - animation.value)),
-              origin: Offset(25, 25),
+              origin: const Offset(25, 25),
               child: InkWell(
                 onTap: () => controller.isCompleted
                     ? controller.reverse()
@@ -123,7 +125,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
 
   Widget buildPager(Size size) {
     return Container(
-      margin: EdgeInsets.only(top: 70),
+      margin: const EdgeInsets.only(top: 70),
       height: size.height - 50,
       child: AnimatedBuilder(
           animation: animation,
@@ -208,7 +210,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
     }
 
     return Container(
-      margin: EdgeInsets.all(4),
+      margin: const EdgeInsets.all(4),
       height: size,
       width: size,
       decoration: BoxDecoration(

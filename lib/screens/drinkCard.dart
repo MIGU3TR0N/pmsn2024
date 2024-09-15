@@ -13,7 +13,7 @@ class DrinkCard extends StatelessWidget {
   double columnAnimation=0;
   int index;
 
-  DrinkCard(this.drink, this.pageOffset, this.index);
+  DrinkCard(this.drink, this.pageOffset, this.index, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -56,7 +56,7 @@ class DrinkCard extends StatelessWidget {
       padding: const EdgeInsets.only(top: 30.0),
       child: Row(
         children: <Widget>[
-          SizedBox(
+          const SizedBox(
             width: 20,
           ),
           Text(
@@ -84,7 +84,7 @@ class DrinkCard extends StatelessWidget {
       height: cardHeight,
       bottom: size.height * .15,
       child: Container(
-        margin: EdgeInsets.symmetric(horizontal: 30),
+        margin: const EdgeInsets.symmetric(horizontal: 30),
         child: ClipRRect(
           borderRadius: BorderRadius.circular(25),
           child: Image.asset(
@@ -102,56 +102,56 @@ class DrinkCard extends StatelessWidget {
       height: cardHeight,
       bottom: size.height * .15,
       child: Container(
-        margin: EdgeInsets.symmetric(horizontal: 30),
+        margin: const EdgeInsets.symmetric(horizontal: 30),
         decoration: BoxDecoration(
             color: drink.darkColor.withOpacity(.50),
             borderRadius: BorderRadius.circular(25)),
-        padding: EdgeInsets.all(30),
+        padding: const EdgeInsets.all(30),
         child: Transform.translate(
           offset: Offset(-columnAnimation,0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Text(
+              const Text(
                 'Frappuccino',
                 style: TextStyle(
                     fontSize: 35,
                     fontWeight: FontWeight.bold,
                     color: Colors.white),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Text(
                 drink.description,
-                style: TextStyle(color: Colors.white70, fontSize: 18),
+                style: const TextStyle(color: Colors.white70, fontSize: 18),
               ),
-              Spacer(),
+              const Spacer(),
               Row(
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: <Widget>[
-                  SizedBox(
+                  const SizedBox(
                     width: 5,
                   ),
                   Image.asset('assets/cup_L.png'),
-                  SizedBox(
+                  const SizedBox(
                     width: 5,
                   ),
                   Image.asset('assets/cup_M.png'),
-                  SizedBox(
+                  const SizedBox(
                     width: 5,
                   ),
                   Image.asset('assets/cup_s.png'),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 15,
               ),
               Container(
                 height: 40,
                 decoration: BoxDecoration(
                     color: mAppGreen, borderRadius: BorderRadius.circular(20)),
-                child: Center(
+                child: const Center(
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: <Widget>[
