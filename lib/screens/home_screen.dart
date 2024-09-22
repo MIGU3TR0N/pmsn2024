@@ -39,7 +39,7 @@ class _HomeScreenState extends State<HomeScreen> {
         }
       }),
       //endDrawer: Drawer(),
-      drawer: const Drawer(),
+      drawer: myDrawer(),
       bottomNavigationBar: ConvexAppBar(
         items: const [
           TabItem(icon: Icons.home, title: 'Home'),
@@ -69,6 +69,28 @@ class _HomeScreenState extends State<HomeScreen> {
             },
           ),
         ]
+      ),
+    );
+  }
+  Widget myDrawer(){
+    return Drawer(
+      child: ListView(
+        children: [
+          UserAccountsDrawerHeader(
+            currentAccountPicture: CircleAvatar(
+              backgroundImage: NetworkImage('https://i.pravatar.cc/300'),
+            ),
+            accountName: Text('Jesus Miguel Cerda Gonzalez'), 
+            accountEmail: Text('cerda.gonzalez.jesus@gmail.com')
+          ),
+          ListTile(
+            onTap: ()=>Navigator.pushNamed(context, '/db'),
+            title: Text('Movies List'),
+            subtitle: Text('Database of movies'),
+            leading: Icon(Icons.movie),
+            trailing: Icon(Icons.chevron_right),
+          ),
+        ],
       ),
     );
   }

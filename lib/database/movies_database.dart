@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:path_provider/path_provider.dart';
+import 'package:pmsn2024/models/moviesdao.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
 
@@ -41,11 +42,21 @@ class MoviesDatabase {
   }
 
   Future<int> INSERT(String table, Map<String, dynamic> row) async {
-    var con = await database;
-    con.insert(table, row);
+    var con = await database; // Si el db ya tiene una instancia, regresa la inst; si no, la crea
+    return await con.insert(table, row);
   }
-  Future<int> UPDATE() async {}
-  Future<int> DELETE() async {}
-  Future<List<MoviesDAO>> SELECT() async {}
+  Future<int> UPDATE(String table, Map<String, dynamic> row) async {
+    var con = await database; // Si el db ya tiene una instancia, regresa la inst; si no, la crea
+    return await con.update(table, row, where: 'idMovie = ?', whereArgs: [row['idMovie']]);
+  }
+  Future<int> DELETE(String table, int idMovie) async {
+    var con = await database;
+    return await con.delete(table, where: 'idMovie = ?', whereArgs: [idMovie]);
+  }
+  Future<List<MoviesDAO>> SELECT() async {
+    var con = await database;
+    var result = await con.query('tblmovies');
+    return await result.map((movie) => MoviesDAO.fromMap(movie)).toList();
+  }
 
 }
