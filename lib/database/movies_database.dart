@@ -27,6 +27,9 @@ class MoviesDatabase {
           idgenre CHAR(1) primary key,
           dscGenre VARCHAR(50)
         );
+        ''';
+        db.execute(query);
+        String query2 = '''
         CREATE TABLE tblmovies(
           idMovie INTEGER PRIMARY KEY,
           nameMovie VARCHAR(100),
@@ -35,8 +38,9 @@ class MoviesDatabase {
           imagen VARCHAR(150),
           release CHAR(10),
           CONSTRAINT fk_gen FOREIGN KEY(idgenre) REFERENCES tblgenre(idgenre)
-        );''';
-        db.execute(query);
+        );
+        ''';
+        db.execute(query2);
       },
     );
   }
