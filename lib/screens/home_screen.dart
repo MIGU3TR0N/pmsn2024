@@ -34,8 +34,8 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       body: Builder(builder: (context){
         switch (v_index){
-          case 1: return const ProfileScreen();
-          default: return const ProfileScreen();
+          case 1: return ProfileScreen();
+          default: return Text('home');
         }
       }),
       //endDrawer: Drawer(),
