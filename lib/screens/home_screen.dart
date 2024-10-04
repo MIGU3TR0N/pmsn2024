@@ -90,6 +90,13 @@ class _HomeScreenState extends State<HomeScreen> {
             leading: Icon(Icons.movie),
             trailing: Icon(Icons.chevron_right),
           ),
+          ListTile(
+            onTap: ()=>Navigator.pushNamed(context, '/popular'),
+            title: Text('Popular Movies'),
+            subtitle: Text('API of movies'),
+            leading: Icon(Icons.movie),
+            trailing: Icon(Icons.chevron_right),
+          ),
         ],
       ),
     );

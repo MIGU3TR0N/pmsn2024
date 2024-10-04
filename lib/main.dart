@@ -3,6 +3,7 @@ import 'package:pmsn2024/screens/home.dart';
 import 'package:pmsn2024/screens/home_screen.dart';
 import 'package:pmsn2024/screens/login_screen.dart';
 import 'package:pmsn2024/screens/movies_screen.dart';
+import 'package:pmsn2024/screens/popular_screen.dart';
 import 'package:pmsn2024/screens/profile_screen.dart';
 import 'package:pmsn2024/settings/global_values.dart';
 import 'package:pmsn2024/settings/theme_settings.dart';
@@ -28,6 +29,7 @@ class MyApp extends StatelessWidget {
             "/profile" : (context) => ProfileScreen(),
             "/login" : (context) => const LoginScreen(),
             "/db":(context) => const MoviesScreen(),
+            "/popular": (context) => const PopularScreen(),
           },
         );
       }
