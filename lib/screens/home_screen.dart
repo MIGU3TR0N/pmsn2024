@@ -1,6 +1,7 @@
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_expandable_fab/flutter_expandable_fab.dart';
+import 'package:pmsn2024/screens/home.dart';
 import 'package:pmsn2024/screens/profile_screen.dart';
 import 'package:pmsn2024/settings/colors_settings.dart';
 import 'package:pmsn2024/settings/global_values.dart';
@@ -34,6 +35,7 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       body: Builder(builder: (context){
         switch (v_index){
+          case 0: return Home();
           case 1: return ProfileScreen();
           default: return Text('home');
         }

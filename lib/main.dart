@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pmsn2024/screens/detail_popular_screen.dart';
 import 'package:pmsn2024/screens/home.dart';
 import 'package:pmsn2024/screens/home_screen.dart';
 import 'package:pmsn2024/screens/login_screen.dart';
@@ -30,6 +31,7 @@ class MyApp extends StatelessWidget {
             "/login" : (context) => const LoginScreen(),
             "/db":(context) => const MoviesScreen(),
             "/popular": (context) => const PopularScreen(),
+            "/detail": (context) => const DetailPopularScreen(),
           },
         );
       }
